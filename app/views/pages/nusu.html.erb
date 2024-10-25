@@ -1,0 +1,108 @@
+<div class="navbar-container">
+  <div class="items-container">
+    <%= link_to root_path do %>
+      <div class="navbar-item">Home</div>
+    <%end%>
+    <%= link_to flee_path do %>
+      <div class="navbar-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="mobile-container">
+  <div class="mobile-items-container">
+    <%= link_to root_path do %>
+      <div class="mobile-item">Home</div>
+    <%end%>
+    <%= link_to flee_path do %>
+      <div class="mobile-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="project-banner" data-controller="scroller">
+  <div class="main-container">
+    <div class="project-banner-content">
+      <div class="project-image-container">
+        <h1>Nusu</h1>
+        <%= image_tag "layernusu.png", alt: "Image du projet Nusu", class: "" %>
+      </div>
+      <div class="text-project-container">
+        <div class="sous-titre">Nusu is a marketplace platform that specializes in renting out unique accommodations.</div>
+        <div class="tag-container">
+          <div class="stack-tag">Ruby On Rails</div>
+          <div class="stack-tag">Javascript / Stimulus</div>
+          <div class="stack-tag">Html</div>
+          <div class="stack-tag">Scss</div>
+        </div>
+        <div class="cta" data-action="click->scroller#firstScroll">Scroll down to see the features <i class="fa-solid fa-arrow-right fa-2xs ps-2"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container" id="Projects">
+    <h2>Search and filter</h2>
+    <div class="section-content">
+      <%= image_tag "nusuframe1.png", alt: "Image du projet Nusu", class: "image-focus-project mt-5 mb-5" %>
+      <p>As a renter, you can search for accommodations using a filter system based on location, capacity, and booking availability.</p>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-1">
+  <div class="main-container">
+    <h2>Investigate</h2>
+    <div class="section-content">
+      <p>You can view the details of an accommodation, read reviews about it, and request a booking from the owner.</p>
+      <%= image_tag "nusuframe2.png", alt: "Image du projet Nusu", class: "image-focus-project mt-5 mb-5" %>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Contact the owner</h2>
+    <div class="section-content">
+      <%= image_tag "nusuframe3.png", alt: "Image du projet Nusu", class: "image-focus-project mt-5 mb-5" %>
+      <p>You can also contact the owners to discuss the details of the reservation.</p>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-1">
+  <div class="main-container">
+    <h2>Control your renting</h2>
+    <div class="section-content">
+      <p>If you have listed a property on the platform, you can manage your booking requests and listings from your professional dashboard.</p>
+      <%= image_tag "nusuframe4.png", alt: "Image du projet Nusu", class: "image-focus-project mt-5 mb-5" %>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Work done</h2>
+    <div class="section-content">
+      <div class="image-task-container">
+        <div class="image-task-horizontal">
+          <h3>Fullstack Coding</h3>
+          <div class="image-task-frontground"></div>
+          <%= image_tag "code.PNG", alt: "code Nusu image", class: "" %>
+        </div>
+        <div class="vertical-box">
+          <div class="image-task-vertical" style="height:100%;">
+            <h3>Product Design</h3>
+            <div class="image-task-frontground"></div>
+            <%= image_tag "nusuproduct.PNG", alt: "maquette nusu image", class: "" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,181 @@
+
+.projects{
+  // background: linear-gradient(180deg, #242424 0%, #3e382c 142%);
+  background-color: $background-2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // padding-bottom: 11vh;
+}
+
+.project{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 54px;
+}
+
+#portfolio:hover{
+  background-color: $background-2;
+  cursor: default;
+}
+
+.project:hover{
+  transition: 0.5s;
+  background-color: $background-1;
+  cursor: pointer
+}
+
+.selector-container{
+  display: flex;
+}
+
+.selector{
+  font-family: "Afacad", sans-serif;
+  font-size: calc(1rem + 1vw);
+  line-height: 1;
+  padding-inline: 4%;
+  padding-block-end: 50px;
+  height: 48px;
+  margin-block-end: 2vw;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+}
+
+.selector:hover {
+  // background-color: $background-1;
+  color: $text-color;
+  border-bottom: 1px $focus-color solid;
+}
+
+
+// Transition
+.selected{
+  transition-duration: 0.5s;
+  color: $text-color;
+  border-bottom: 1px $focus-color solid;
+}
+
+.unselected{
+  transition-duration: 0.5s;
+  color: $no-focus-color;
+}
+
+.opacity-off{
+  transition: 0.5s;
+  opacity: 0;
+  padding-inline: 1vw;
+}
+
+.opacity-on{
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.cacher{
+  display: none !important;
+}
+
+.image-project-container{
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  h3{
+    position: absolute;
+    left: 32px;
+    z-index: 2;
+    top: 249px;
+    color: $text-color;
+    cursor: pointer
+  }
+
+}
+
+.background-project-name{
+  background: linear-gradient(8deg, #272521 0%, #3e382c00 64%);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.project-image{
+  height: 290px;
+  width: 35vw;
+  object-fit: cover;
+  filter: brightness(81%);
+  cursor: pointer
+}
+
+.project-text{
+  height: 276px;
+  width: 459px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .sous-titre{
+    color: $focus-color;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tag-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.stack-tag{
+  background-color: $background-2;
+  border: solid 1px #c1ae8a2e;
+  padding-block: 9px;
+  padding-inline: 14px;
+  color: $focus-color;
+}
+
+
+@media (max-width: 768px) {
+
+  .projects{
+    height: 100%;
+    padding-block: 21px
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    padding-block: 31px;
+    padding-inline: 0px;
+    gap: 17px;
+  }
+
+  .project-text{
+    width: 95%;
+  }
+
+  .image-project-container{
+    width: 100%;
+  }
+
+  .project-image{
+    width: 95%;
+  }
+
+  h2{
+    margin-bottom: 36px;
+  }
+
+}

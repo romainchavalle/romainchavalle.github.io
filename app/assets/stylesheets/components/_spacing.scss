@@ -1,0 +1,31 @@
+.spacing{
+  margin-block: -20px;
+  height: 1px;
+  width: 72px;
+  background-color: #C1AE8A;
+  position: absolute;
+  right: 0;
+}
+
+.spacing2{
+  height: 1px;
+  width: 72px;
+  background-color: #C1AE8A;
+  position: absolute;
+  left: 19px;
+  margin-block: -14px;
+}
+
+.spacing3{
+  margin-block: 27px;
+  height: 1px;
+  width: 72px;
+  background-color: #C1AE8A;
+}
+
+@media (max-width: 1200px) {
+  .spacing2{
+    display: none;
+  }
+
+}

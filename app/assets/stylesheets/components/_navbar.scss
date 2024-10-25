@@ -1,0 +1,95 @@
+// navbar computer
+
+.navbar-container{
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  padding-inline: 17%;
+  background: linear-gradient(180deg, #272521c2 10%, #3e382c00 100%);
+}
+
+.items-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  gap: 65px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.navbar-item{
+  height: 100%;
+  color: $text-grey;
+  font-size:large;
+  font-family: $font-primary;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item:hover{
+  transition:0.3s;
+  border-bottom: solid 1px $focus-color;
+  color: $text-color;
+}
+
+
+.actual-view{
+  border-bottom: solid 1px $focus-color;
+  color: $text-color;
+}
+
+// navbar mobile
+
+.mobile-container{
+  height: 75px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  padding-inline: 5%;
+  background: #272727;
+  box-shadow: 0px -5px 11px 0px #0000000f;
+}
+
+.mobile-items-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.mobile-item{
+  height: 100%;
+  color: $text-grey;
+  font-size:large;
+  font-family: $font-primary;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-item:hover{
+  transition:0.3s;
+  border-bottom: solid 1px $focus-color;
+  color: $text-color;
+}
+
+
+.actual-view{
+  border-bottom: solid 1px $focus-color;
+  color: $text-color;
+}
+
+@media (max-width: 768px) {
+  .navbar-container{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-container{
+    display: none;
+  }
+}

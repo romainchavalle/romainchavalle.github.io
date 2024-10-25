@@ -1,0 +1,56 @@
+h1{
+  font-family: $font-primary;
+  font-size: calc(3rem + 4.5vw);
+  font-weight: bold;
+  color: $text-color;
+  line-height: 7rem;
+}
+
+h2{
+  font-family: $font-primary;
+  font-size: calc(3.5rem + 1.5vw);
+  // font-weight: 600;
+  width: fit-content;
+  color: $text-color;
+  border-bottom: 1px solid $text-grey;
+}
+
+// @media (max-width: 768px) {
+
+//   h2{
+//     width: 100%;
+//   }
+// }
+
+h3{
+  font-family: $font-secondary;
+  font-size: 25px;
+  font-weight: 500;
+  color: $focus-color;
+  margin: 0;
+}
+
+.sous-titre{
+  font-family: $font-primary;
+  font-size: 22px;
+  color: $text-grey;
+}
+
+p{
+  font-family: $font-primary;
+  font-size: 18px;
+  color: $text-color;
+}
+
+.center{
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  // color: #979797;;
+}
+
+// a:hover{
+//   color: $text-color;
+// }

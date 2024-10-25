@@ -1,0 +1,26 @@
+
+@import "bootstrap";
+@import "font-awesome";
+
+// Base
+@import "base/colors";
+@import "base/typo";
+@import "base/text";
+@import "base/body";
+@import "base/responsive";
+@import "base/container";
+
+// Sections
+@import "sections/banner";
+@import "sections/skillz";
+@import "sections/projects";
+@import "sections/stack";
+@import "sections/about";
+@import "sections/flee";
+
+// Components
+@import "components/navbar";
+@import "components/spacing";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Afacad&family=Questrial&display=swap');

@@ -1,0 +1,113 @@
+<div class="navbar-container">
+  <div class="items-container">
+    <%= link_to root_path do %>
+      <div class="navbar-item">Home</div>
+    <%end%>
+    <%= link_to nusu_path do %>
+      <div class="navbar-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="mobile-container">
+  <div class="mobile-items-container">
+    <%= link_to root_path do %>
+      <div class="mobile-item">Home</div>
+    <%end%>
+    <%= link_to nusu_path do %>
+      <div class="mobile-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="project-banner" data-controller="scroller">
+  <div class="main-container">
+    <div class="project-banner-content">
+      <div class="project-image-container">
+        <h1>Flee</h1>
+        <%= image_tag "Mockup 13.png", alt: "Image du projet Flee", class: "" %>
+      </div>
+      <div class="text-project-container">
+        <div class="sous-titre">Flee is an adventure dating app for solo travelers looking to share their trips with other people.</div>
+        <div class="tag-container">
+          <div class="stack-tag">Ruby On Rails</div>
+          <div class="stack-tag">Javascript / Stimulus</div>
+          <div class="stack-tag">Html</div>
+          <div class="stack-tag">Scss</div>
+        </div>
+        <div class="cta" data-action="click->scroller#firstScroll">Scroll down to see the features <i class="fa-solid fa-arrow-right fa-2xs ps-2"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container" id="Projects">
+    <h2>Search and store travels</h2>
+    <div class="section-content">
+      <%= image_tag "frame1.png", alt: "Image du projet Flee", class: "image-focus-project" %>
+      <p>As a traveler, Flee allows you to search for a trip using a filtering system. From the trips that match your criteria, you can view general informations and save your favorites in your wish list.</p>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-1">
+  <div class="main-container">
+    <h2>Investigate</h2>
+    <div class="section-content">
+      <p>You can visit the trip page to learn more about the itinerary details, discover the person organizing the trip, and see the confirmed participants.</p>
+      <%= image_tag "frame2.png", alt: "Image du projet Flee", class: "image-focus-project" %>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Contact your travel buddy</h2>
+    <div class="section-content">
+      <%= image_tag "frame3.png", alt: "Image du projet Flee", class: "image-focus-project" %>
+      <p>To discuss the trip, you can contact the organizer directly. You can also start a group chat with the participants once your spot on the trip is confirmed.</p>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-1">
+  <div class="main-container">
+    <h2>Book your travel</h2>
+    <div class="section-content">
+      <p>To join a trip, you must apply through the app. You can check the status of your applications directly from your personal dashboard.</p>
+      <%= image_tag "frame4.png", alt: "Image du projet Flee", class: "image-focus-project" %>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Work done</h2>
+    <div class="section-content">
+      <div class="image-task-container">
+        <div class="image-task-horizontal">
+          <h3>Fullstack Coding</h3>
+          <div class="image-task-frontground"></div>
+          <%= image_tag "code.PNG", alt: "code flee image", class: "" %>
+        </div>
+        <div class="vertical-box">
+          <div class="image-task-vertical">
+            <h3>Product Design</h3>
+            <div class="image-task-frontground"></div>
+            <%= image_tag "fleemaquette.PNG", alt: "maquette flee image", class: "" %>
+          </div>
+          <div class="image-task-vertical">
+            <h3>Project Management</h3>
+            <div class="image-task-frontground"></div>
+            <%= image_tag "projectmanagement.png", alt: "Project management image", class: "" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

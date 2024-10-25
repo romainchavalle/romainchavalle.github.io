@@ -1,0 +1,57 @@
+.skillz{
+  height: 100vh;
+  // padding-bottom: 11vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skillz-content{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-block: 54px;
+}
+
+.skill{
+  height: 276px;
+  width: 459px;
+  position: relative;
+  background-color: $background-2;
+
+  h3{
+    margin-bottom: 44px !important;
+    color: $focus-color;
+  }
+}
+
+.skill-infos{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: end;
+  width: 94%;
+  padding-block-end: 20px;
+  margin-left: 1px;
+}
+
+@media (max-width: 768px) {
+
+  .skillz{
+    height: 100%;
+    padding-block: 40px;
+  }
+
+  .skillz-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 95%; /* Sur les petits écrans, chaque bloc prend toute la largeur */
+  }
+
+  h2{
+    margin-bottom: 36px;
+  }
+}

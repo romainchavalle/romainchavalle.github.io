@@ -1,0 +1,323 @@
+<div class="navbar-container" data-controller="scroller">
+  <div class="items-container">
+    <div class="navbar-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Home</div>
+    <div class="navbar-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Projects</div>
+    <div class="navbar-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Stack</div>
+    <div class="navbar-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">About</div>
+  </div>
+</div>
+
+<div class="mobile-container" data-controller="scroller">
+  <div class="mobile-items-container">
+    <div class="mobile-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Home</div>
+    <div class="mobile-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Projects</div>
+    <div class="mobile-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">Stack</div>
+    <div class="mobile-item" data-scroller-target="navbarItem" data-action="click->scroller#scroll">About</div>
+  </div>
+</div>
+
+<div class="main-banner">
+  <div class="main-container">
+    <div class="banner-content target" id="Home">
+      <div class="banner-text">
+        <h1>From Product Vision to Code Execution</h1>
+        <div class="sous-titre">I am a junior web developer who graduated from Le Wagon in 2024. To further my education, I chose to join ESGI in 2025 for a two-year program. I am now looking for a company to complete my apprenticeship.</div>
+      </div>
+      <%= image_tag "icone.png", alt: "flèche", class: "img-test", data: { controller: "scroller", action: "click->scroller#firstScroll" }%>
+    </div>
+  </div>
+</div>
+
+
+<div class="projects target" id="Projects">
+  <div class="main-container">
+    <h2>Projects</h2>
+  </div>
+  <div class="main-container" data-controller="project">
+    <div class="selector-container">
+      <div class="selector selected" data-action="click->project#select">Flee</div>
+      <div class="selector unselected" data-action="click->project#select">Nusu</div>
+      <div class="selector unselected" data-action="click->project#select">Portfolio</div>
+    </div>
+    <%= link_to flee_path do %>
+      <div class="project" data-project-target="project" data-target-value="Flee">
+        <div class="image-project-container">
+          <h3>Flee</h3>
+          <%= image_tag "Mockup 13.png", alt: "Image du projet Flee", class: "project-image" %>
+          <div class="background-project-name"></div>
+        </div>
+        <div class="project-text">
+          <p>Flee is an adventure dating app for solo travelers looking to share their trips with other people.
+          </p>
+          <div class="tag-container">
+            <div class="stack-tag">Ruby On Rails</div>
+            <div class="stack-tag">Javascript / Stimulus</div>
+            <div class="stack-tag">Html</div>
+            <div class="stack-tag">Scss</div>
+          </div>
+          <div class="sous-titre">See more <i class="fa-solid fa-arrow-right fa-2xs ps-2"></i></div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to nusu_path do %>
+      <div class="project cacher opacity-off" data-project-target="project" data-target-value="Nusu">
+        <div class="image-project-container">
+          <h3>Nusu</h3>
+          <div class="background-project-name"></div>
+          <%= image_tag "layernusu.png", alt: "Image du projet Flee", class: "project-image" %>
+        </div>
+        <div class="project-text">
+          <p>Nusu is a marketplace platform that specializes in renting out unique accommodations.</p>
+          <div class="tag-container">
+            <div class="stack-tag">Ruby On Rails</div>
+            <div class="stack-tag">Javascript / Stimulus</div>
+            <div class="stack-tag">Html</div>
+            <div class="stack-tag">Scss</div>
+          </div>
+          <div class="sous-titre">See more <i class="fa-solid fa-arrow-right fa-2xs ps-2"></i></div>
+        </div>
+      </div>
+    <% end %>
+
+
+    <div class="project cacher opacity-off" data-project-target="project" data-target-value="Portfolio" id="portfolio">
+      <div class="image-project-container">
+        <h3>Portfolio</h3>
+        <div class="background-project-name"></div>
+        <%= image_tag "portfolioframes.png", alt: "Image du portfolio", class: "project-image" %>
+      </div>
+      <div class="project-text">
+        <p>I developed a fully responsive portfolio from scratch to showcase the various projects I've worked on.</p>
+        <div class="tag-container">
+          <div class="stack-tag">Ruby On Rails</div>
+          <div class="stack-tag">Javascript / Stimulus</div>
+          <div class="stack-tag">Html</div>
+          <div class="stack-tag">Scss</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="stacks target" id="Stack">
+  <div class="main-container">
+    <h2>Skills</h2>
+  </div>
+
+  <div class="main-container" data-controller="project" style="height: 72%;">
+    <div class="selector-container">
+      <div class="selector selected" data-action="click->project#select">General Skills</div>
+      <div class="selector unselected" data-action="click->project#select">Actual Stack</div>
+      <div class="selector unselected" data-action="click->project#select">Incomming Learnings</div>
+    </div>
+
+    <div class="skillz-content" data-project-target="project" data-target-value="General Skills">
+      <div class="skill" id="first">
+        <div class="skill-infos">
+          <h3><i class="fa-solid fa-code pe-2"></i> Fullstack Development</h3>
+          <div class="spacing"></div>
+          <div class="sous-titre">I'm learning to build complete web solutions, from frontend to backend.</div>
+        </div>
+      </div>
+      <div class="skill" id="second">
+        <div class="skill-infos">
+          <h3><i class="fa-regular fa-object-ungroup pe-2"></i></i> Product Design</h3>
+          <div class="spacing"></div>
+          <div class="sous-titre">I enjoy creating new designs and bringing ideas to life in the browser.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stacks-container cacher opacity-off" data-project-target="project" data-target-value="Actual Stack">
+      <div class="family-stack">
+        <h3><i class="fa-solid fa-code pe-2"></i>Languages</h3>
+        <div class="spacing3"></div>
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "ruby.png", alt:"ruby", class:"stack-image" %></div>
+          <p>Ruby</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "javascript.png", alt:"javascript", class:"stack-image" %></div>
+          <p>Javascript</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "html.png", alt:"html", class:"stack-image" %></div>
+          <p>Html</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "css.svg", alt:"ruby", class:"stack-image" %></div>
+          <p>Css</p>
+        </div>
+      </div>
+
+      <div class="family-stack">
+        <h3><i class="fa-brands fa-codepen pe-2"></i> Frameworks</h3>
+        <div class="spacing3"></div>
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "rails.png", alt:"rails", class:"stack-image" %></div>
+          <p>Rails</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "active records.png", alt:"active records", class:"stack-image" %></div>
+          <p>Active records</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "stimulus.png", alt:"stimulus", class:"stack-image" %></div>
+          <p>Stimulus</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "bootstrap.svg", alt:"bootstrap", class:"stack-image" %></div>
+          <p>Bootstrap</p>
+        </div>
+      </div>
+
+      <div class="family-stack">
+        <h3><i class="fa-solid fa-toolbox pe-2"></i>Others</h3>
+        <div class="spacing3"></div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "vscode.png", alt:"VS code", class:"stack-image" %></div>
+          <p>VS Code</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "figma.svg", alt:"Figma", class:"stack-image" %></div>
+          <p>Figma</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "heroku.png", alt:"Heroku", class:"stack-image" %></div>
+          <p>Heroku</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "mapbox.png", alt:"Mapbox", class:"stack-image" %></div>
+          <p>mapbox</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="stacks-container cacher opacity-off" data-project-target="project" data-target-value="Incomming Learnings">
+      <div class="family-stack">
+        <h3><i class="fa-solid fa-code pe-2"></i>Languages</h3>
+        <div class="spacing3"></div>
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "php.png", alt:"php", class:"stack-image" %></div>
+          <p>Php</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "golang.png", alt:"golang", class:"stack-image" %></div>
+          <p>Golang</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "python.png", alt:"python", class:"stack-image" %></div>
+          <p>Python</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "typescript.png", alt:"typescript", class:"stack-image" %></div>
+          <p>Typescript</p>
+        </div>
+      </div>
+
+      <div class="family-stack">
+        <h3><i class="fa-brands fa-codepen pe-2"></i> Frameworks</h3>
+        <div class="spacing3"></div>
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "symfony.png", alt:"symfony", class:"stack-image" %></div>
+          <p>Symfony</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "vue.png", alt:"vue", class:"stack-image" %></div>
+          <p>VueJS</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "laravel.png", alt:"laravel", class:"stack-image" %></div>
+          <p>Laravel</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "react.png", alt:"react", class:"stack-image" %></div>
+          <p>React</p>
+        </div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "api.png", alt:"api", class:"stack-image" %></div>
+          <p>API Plateform</p>
+        </div>
+      </div>
+
+      <div class="family-stack">
+        <h3><i class="fa-solid fa-toolbox pe-2"></i>Others</h3>
+        <div class="spacing3"></div>
+
+        <div class="stack">
+          <div class="image-stack-container"><%= image_tag "nodejs.svg", alt:"node", class:"stack-image" %></div>
+          <p>Node JS</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about target" id="About">
+  <div class="main-container">
+    <h2>About</h2>
+  </div>
+  <div class="main-container">
+    <div class="about-container">
+      <div class="text-about-container">
+        <h3>Let's work together !</h3>
+        <div class="spacing2"></div>
+        <p>My name is Romain Chavalle, and I am 27 years old. After navigating into digital marketing, I decided to transition into web development to explore the technical aspects of products.
+
+After completing an initial training and working on several concrete projects at Le Wagon Paris, I decided to continue my studies at ESGI and am now looking for a company to host me as an apprentice.
+
+Outside of coding, I enjoy sliding sports like skiing and surfing, as well as computer-assisted music production.</p>
+        <div class="sous-titre"><i class="fa-regular fa-envelope-open pe-2"></i>  romain.chavalle@gmail.com </div>
+        <div class="sous-titre"><i class="fa-solid fa-mobile-screen pe-2"></i>  06 46 08 19 31</div>
+      </div>
+      <div class="right-box">
+        <div class="image-about-container">
+          <%= image_tag "portrait.jpg", alt:"portrait", class:"portrait" %>
+          <div class="background-about-portrait"></div>
+        </div>
+        <div class="graduation-box">
+          <div class="graduation">
+            <div class="sous-titre">2022</div>
+            <p>Master Digital Marketing</p>
+            <p>IAE La Rochelle</p>
+          </div>
+
+          <div class="graduation">
+            <div class="sous-titre">2024</div>
+            <p>Web Development Bootcamp</p>
+            <p>Le Wagon Paris</p>
+          </div>
+
+          <div class="graduation">
+            <div class="sous-titre">2025</div>
+            <p>Mastère Ingénierie du Web</p>
+            <p>ESGI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
