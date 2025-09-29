@@ -9,7 +9,11 @@ class PagesController < ApplicationController
   end
 
   def nusu
-    
+
+  end
+
+  def cliking
+
   end
 
 end

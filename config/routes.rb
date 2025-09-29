@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   root "pages#accueil"
   get "flee", to: "pages#flee"
   get "nusu", to: "pages#nusu"
+  get "cliking", to: "pages#cliking"
 
 end
