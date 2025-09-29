@@ -1,1 +1,114 @@
-coucou from cliking.
+<div class="navbar-container">
+  <div class="items-container">
+    <%= link_to root_path do %>
+      <div class="navbar-item">Home</div>
+    <%end%>
+    <%= link_to flee_path do %>
+      <div class="navbar-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="mobile-container">
+  <div class="mobile-items-container">
+    <%= link_to root_path do %>
+      <div class="mobile-item">Home</div>
+    <%end%>
+    <%= link_to flee_path do %>
+      <div class="mobile-item">Next Project</div>
+    <%end%>
+  </div>
+</div>
+
+<div class="project-banner" data-controller="scroller">
+  <div class="main-container">
+    <div class="project-banner-content">
+      <div class="project-image-container">
+        <h1>Cliking</h1>
+        <%= image_tag "cliking-homepage.png", alt: "Image du projet Cliking", class: "" %>
+      </div>
+      <div class="text-project-container">
+        <div class="sous-titre">Cliking is a Customer Satisfaction Measurement and Management Software.</div>
+        <div class="tag-container">
+          <div class="stack-tag">Ruby On Rails</div>
+          <div class="stack-tag">Javascript / Stimulus</div>
+          <div class="stack-tag">Html</div>
+          <div class="stack-tag">Scss</div>
+        </div>
+        <div class="cta" data-action="click->scroller#firstScroll">Scroll down to see the features <i class="fa-solid fa-arrow-right fa-2xs ps-2"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container" id="Projects">
+    <h2>Customer Satisfaction Surveys</h2>
+    <div class="section-content">
+      <%= image_tag "Enquete.png", alt: "Image du projet Cliking", class: "image-focus-project" %>
+      <p>Cliking allows you to create engaging and fully personnalized surveys with different types of questions and answers in different languages. Each answer increment a fully automated dashboard so you can easily manage your customer satisfaction experience through different KPI's.</p>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-1">
+  <div class="main-container">
+    <h2>Rewards</h2>
+    <div class="section-content">
+      <div class="d-flex flex-column justify-content-center">
+        <p>On each survey, you can set up different types of rewards to maximise your response rate, like :
+        </p>
+        <ul>
+          <li>Instant reward (promotion, offer,...)</li>
+          <li>Contest</li>
+          <li>Points pool</li>
+          <li>Spin wheel</li>
+        </ul>
+      </div>
+      <%= image_tag "reward.png", alt: "Image du projet Cliking", class: "image-focus-project" %>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Communication</h2>
+    <div class="section-content">
+      <%= image_tag "email.png", alt: "Image du projet Cliking", class: "image-focus-project" %>
+      <div class="d-flex flex-column justify-content-center">
+        <p>With the communication module, you can easily :</p>
+        <ul>
+          <li>Create and sent personnalized mailing to specific targets</li>
+          <li>Send out your surveys to customer's linked establishments</li>
+          <li>Manage your e-reputation by centralizing and responding to customer reviews from a single platform</li>
+        </ul>
+      </div>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
+
+<div class="section" id="background-2">
+  <div class="main-container">
+    <h2>Work done</h2>
+    <div class="section-content">
+      <div class="image-task-container">
+        <div>
+          <h3>Summary</h3>
+          <p>During this year of training, I mainly worked on the Reward and Communication modules, in addition to handling daily bug fixes.</p>
+          <p style="margin-top: 32px;">Main Challenges :</p>
+          <ul>
+              <li><strong>Multi-site email sending :</strong> Adapt the email sending system for clients with large groups (500+ establishments), enabling grouped targeting and multi-sending to save time. <br>Challenge : Managing performance and asynchronous processing with background jobs, as the change significantly increased data volume across multiple dimensions.</li>
+              <li><strong>Campaign scheduling :</strong> Allow clients to schedule campaign sends in advance. <br>Challenge : Handle sending across groups with establishments in different time zones.</li>
+              <li><strong>Campaign history tracking :</strong> Provide access to previous versions of re-sent campaigns and all client interactions. <br>Challenge : Rebuild a consistent history from incomplete data.</li>
+              <li><strong>Reward feature - Spin Wheel :</strong> Develop a new type of reward and user scenario. <br>Challenge : Manage the entire flow asynchronously in Stimulus/Javascript without reloading the page.</li>
+              <li><strong>Multi-update Dashboard (Back-office) :</strong> Save time for internal teams by enabling bulk updates of client accounts. <br>Challenge : Handle multiple dependencies impacted by this feature.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="spacing2"></div>
+  </div>
+</div>
